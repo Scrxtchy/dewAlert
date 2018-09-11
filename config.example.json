@@ -1,0 +1,25 @@
+{
+	"servers": [
+		{"address": "ws://1.2.3.4", "password": "GOD"},
+		{"address": "ws://1.2.3.4", "password": "Bonus Ducks"}
+	],
+	"messages":[
+		{"message":"Lorem ipsum dolor sit amet.", "wait":50000},
+		{"message":"Lorem ipsum dolor sit amet.", "wait":500},
+		{"message":"Lorem ipsum dolor sit amet.", "wait":500},
+		{"message":"Lorem ipsum dolor sit amet.", "wait":500},
+		{"message":"Lorem ipsum dolor sit amet.", "wait":400000},
+		{"message":"Lorem ipsum dolor sit amet.", "wait":50000},
+		{"message":"Lorem ipsum dolor sit amet.", "wait":500},
+		{"message":"Lorem ipsum dolor sit amet.", "wait":400000}
+	],
+	"rules":[
+		"Lorem ipsum dolor sit amet.",
+		"Lorem ipsum dolor sit amet.",
+		"Lorem ipsum dolor sit amet.",
+		"Lorem ipsum dolor sit amet.",
+		"Lorem ipsum dolor sit amet.",
+		"Lorem ipsum dolor sit amet.",
+		"Lorem ipsum dolor sit amet."
+	]
+}
