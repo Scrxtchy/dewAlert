@@ -28,7 +28,6 @@ namespace dewAlert
 			Console.WriteLine("Connecting");
 			IConfiguration config = new ConfigurationBuilder().AddJsonFile("config.json", false).Build();
 
-
 			foreach(IConfigurationSection server in config.GetSection("servers").GetChildren())
 			{
 				ServerConnection connection = new ServerConnection(server["address"], server["password"]);
@@ -45,7 +44,6 @@ namespace dewAlert
 			{
 				Messages.Add(message["message"], int.Parse(message["wait"]));
 			}
-
 		}
 
 		private void OnMessage(object sender, string message)
@@ -57,8 +55,7 @@ namespace dewAlert
 			{
 				ChatMessage cm = RegexParser.ParseChat(message);
 
-				string newline = "[" + cm.date + " " + cm.time + "] " + cm.name + ": " + cm.message + "";
-				Console.WriteLine(newline);
+				Console.WriteLine(cm);
 
 				if (cm.message.ToLower() == "!rules")
 				{
@@ -70,11 +67,12 @@ namespace dewAlert
 					}
 				}
 			}
-
+#if DEBUG
 			else
 			{
 				Console.WriteLine(message);
-			}		
+			}
+#endif
 		}
 
 		private void OnClose(object sender, int code)

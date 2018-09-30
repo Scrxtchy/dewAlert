@@ -50,5 +50,10 @@ namespace dewAlert
 		public string uid;
 		public string ip;
 		public string message;
+
+		public override string ToString()
+		{
+			return $"[{time}] <{name}/{uid}/{ip}> {message}";
+		}
 	}
 }
